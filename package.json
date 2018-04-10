@@ -1,0 +1,8 @@
+{
+  "name": "camo",
+  "version": "2.3.0",
+  "dependencies": {},
+  "devDependencies": {
+    "coffee-script": "^1.12.6"
+  }
+}
