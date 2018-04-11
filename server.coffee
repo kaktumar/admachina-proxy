@@ -13,7 +13,7 @@ socket_timeout  = parseInt(process.env.CAMO_SOCKET_TIMEOUT || 15, 15)
 logging_enabled = process.env.CAMO_LOGGING_ENABLED || "disabled"
 keep_alive      = process.env.CAMO_KEEP_ALIVE      || "false"
 endpoint_path   = process.env.CAMO_ENDPOINT_PATH   || ""
-site_token      = "a699842fb529382e40c5e563eb"
+# site_token      = "a699842fb529382e40c5e563eb"
 
 endpoint_path_regex = new RegExp("^#{endpoint_path}") if endpoint_path
 
@@ -229,7 +229,8 @@ server = Http.createServer (req, resp) ->
 
     if url.pathname? && uid
       url = Url.parse(
-        "https://admachina.com/teaser/loadScript?uid=#{uid}&site=#{site_token}"
+        "https://admachina.com/bv2/load.js?uid=#{uid}"
+        # "https://admachina.com/teaser/loadScript?uid=#{uid}&site=#{site_token}"
       )
       process_url url, transferredHeaders, resp, max_redirects
     else
